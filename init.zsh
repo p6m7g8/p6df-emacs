@@ -18,6 +18,8 @@ p6df::modules::emacs::external::brew() {
   brew install emacs-plus --without-spacemacs-icon 
 
   brew install offlineimap
+
+  brew install w3m
 }
 
 p6df::modules::emacs::init() {
