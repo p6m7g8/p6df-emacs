@@ -26,5 +26,3 @@ p6df::modules::emacs::init() {
 
     alias ek="ps -efwww | awk '/[eE]macs/ { print \$2 }' | xargs kill -9"
 }
-
-p6df::modules::emacs::init
