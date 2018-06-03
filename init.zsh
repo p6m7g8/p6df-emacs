@@ -12,13 +12,9 @@ p6df::modules::emacs::external::git() {
 
 p6df::modules::emacs::external::brew() {
 
+  brew install emacs --with-cocoa --with-librsvg --with-mailutils --with-modules
   brew install mu --with-emacs
-
-  brew tap d12frosted/emacs-plus
-  brew install emacs-plus --without-spacemacs-icon 
-
   brew install offlineimap
-
   brew install w3m
 }
 
