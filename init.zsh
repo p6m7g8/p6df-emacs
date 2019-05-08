@@ -20,6 +20,7 @@ p6df::modules::emacs::external::brew() {
 p6df::modules::emacs::home::symlink() {
 
   # XXX: .emacs.d + selection
+  true;
 }
 
 p6df::modules::emacs::init() {
