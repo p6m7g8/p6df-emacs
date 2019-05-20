@@ -1,7 +1,5 @@
 p6df::modules::emacs::version() { echo "0.0.1" }
-p6df::modules::emacs::deps()    {
-	ModuleDeps=(p6m7g8/p6emacs)
-}
+p6df::modules::emacs::deps()    { ModuleDeps=(p6m7g8/p6emacs) }
 
 p6df::modules::emacs::external::git() {
 
@@ -19,11 +17,10 @@ p6df::modules::emacs::external::brew() {
 
 p6df::modules::emacs::home::symlink() {
 
-  # XXX: .emacs.d + selection
-  true;
+  ln -fs $P6_DFZ_SRC_P6M7G8_DIR/p6emacs .emacs.d
 }
 
 p6df::modules::emacs::init() {
 
-    alias ek="ps -efwww | awk '/[eE]macs/ { print \$2 }' | xargs kill -9"
+  alias ek="ps -efwww | awk '/[eE]macs/ { print \$2 }' | xargs kill -9"
 }
