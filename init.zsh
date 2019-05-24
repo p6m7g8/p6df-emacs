@@ -9,7 +9,9 @@ p6df::modules::emacs::external::git() {
 
 p6df::modules::emacs::external::brew() {
 
-  brew install emacs-head --with-cocoa --with-imagemagick --with-mailutils
+  brew tap daviderestivo/emacs-head
+  brew install emacs-head --with-cocoa --with-imagemagick@7 --with-mailutils
+
   brew install mu
   brew install offlineimap
   brew install w3m
