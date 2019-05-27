@@ -1,24 +1,16 @@
 p6df::modules::emacs::version() { echo "0.0.1" }
-p6df::modules::emacs::deps()    { ModuleDeps=(p6m7g8/p6emacs) }
-
-p6df::modules::emacs::external::git() {
-
-  git clone https://github.com/magnars/.emacs.d
-  git clone https://github.com/hlissner/doom-emacs
+p6df::modules::emacs::deps()    { 
+	ModuleDeps=(
+		p6m7g8/p6emacs
+		magnars/.emacs.d
+		hlissner/doom-emacs
+		rmm5t/dotfiles
+	) 
 }
 
-p6df::modules::emacs::external::brew() {
-
-  brew tap daviderestivo/emacs-head
-  brew install emacs-head --with-cocoa --with-imagemagick@7 --with-mailutils
-
-  brew install mu
-  brew install offlineimap
-  brew install w3m
-
+p6df::modules::emacs::langs() {
   # .emacs.d
   go get github.com/rogpeppe/godef
-
 #	If you're looking for even more integration with Go, namely
 #	on-the-fly syntax checking, auto-completion and snippets, it is
 #	recommended that you look at flycheck
@@ -27,6 +19,16 @@ p6df::modules::emacs::external::brew() {
 #	\(see URL `https://github.com/nsf/gocode'), go-eldoc
 #	\(see URL `github.com/syohex/emacs-go-eldoc') and yasnippet-go
 #	\(see URL `https://github.com/dominikh/yasnippet-go')
+}
+
+p6df::modules::emacs::external::brew() {
+
+  brew tap daviderestivo/emacs-head
+  brew install emacs-head --with-cocoa --with-imagemagick --with-multicolor-fonts --with-mailutils --with-dbus
+
+  brew install mu
+  brew install offlineimap
+  brew install w3m
 }
 
 p6df::modules::emacs::home::symlink() {
