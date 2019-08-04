@@ -9,16 +9,15 @@ p6df::modules::emacs::deps()    {
 }
 
 p6df::modules::emacs::langs() {
-  # .emacs.d
+  ## .emacs.d
+  
+  # python
+
+  # typescript
+
+  # go
   go get github.com/rogpeppe/godef
-#	If you're looking for even more integration with Go, namely
-#	on-the-fly syntax checking, auto-completion and snippets, it is
-#	recommended that you look at flycheck
-#	\(see URL `https://github.com/flycheck/flycheck') or flymake in combination
-#	with goflymake (see URL `https://github.com/dougm/goflymake'), gocode
-#	\(see URL `https://github.com/nsf/gocode'), go-eldoc
-#	\(see URL `github.com/syohex/emacs-go-eldoc') and yasnippet-go
-#	\(see URL `https://github.com/dominikh/yasnippet-go')
+  goenv rehash
 }
 
 p6df::modules::emacs::external::brew() {
@@ -40,3 +39,18 @@ p6df::modules::emacs::init() {
 
   alias ek="ps -efwww | awk '/[eE]macs/ { print \$2 }' | xargs kill -9"
 }
+
+
+
+
+
+
+
+#	If you're looking for even more integration with Go, namely
+#	on-the-fly syntax checking, auto-completion and snippets, it is
+#	recommended that you look at flycheck
+#	\(see URL `https://github.com/flycheck/flycheck') or flymake in combination
+#	with goflymake (see URL `https://github.com/dougm/goflymake'), gocode
+#	\(see URL `https://github.com/nsf/gocode'), go-eldoc
+#	\(see URL `github.com/syohex/emacs-go-eldoc') and yasnippet-go
+#	\(see URL `https://github.com/dominikh/yasnippet-go')
