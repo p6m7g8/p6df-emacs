@@ -5,6 +5,8 @@ p6df::modules::emacs::deps()    {
 		magnars/.emacs.d
 		hlissner/doom-emacs
 		rmm5t/dotfiles
+		ananthakumaran/dotfiles
+		NicolasPetton/emacs.d
 	) 
 }
 
@@ -32,9 +34,25 @@ p6df::modules::emacs::external::brew() {
 
 p6df::modules::emacs::home::symlink() {
 
-  ln -fs $P6_DFZ_SRC_P6M7G8_DIR/p6emacs .emacs.d
+  p6df::modules::emacs::home::choose "mine"
 }
 
+p6df::modules::emacs::home::choose() {
+  local config="$1"
+
+  case $config in
+      mine)    src=$P6_DFZ_SRC_P6M7G8_DIR/p6emacs ;;
+      doom)    src=$P6_DFZ_SRC_DIR/hlissner/doom-emacs ;;
+      magnars) src=$P6_DFZ_SRC_DIR/magnars/.emacs.d ;;
+      rmm5t)   src=$P6_DFZ_SRC_DIR/rmm5t/dotfiles/emacs.d ;;
+      tss)     src=$P6_DFZ_SRC_DIR/ananthakumaran/dotfiles/.emacs.d ;;
+      nic)     src=$P6_DFZ_SRC_DIR/NicolasPetton/emacs.d ;;
+  esac
+
+  unlink $HOME/.emacs.d
+  ln -fs $src $HOME/.emacs.d
+}
+    
 p6df::modules::emacs::init() {
 
   alias ek="ps -efwww | awk '/[eE]macs/ { print \$2 }' | xargs kill -9"
