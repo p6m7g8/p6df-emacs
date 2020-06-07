@@ -1,4 +1,18 @@
+######################################################################
+#<
+#
+# Function: p6df::modules::emacs::version()
+#
+#>
+######################################################################
 p6df::modules::emacs::version() { echo "0.0.1" }
+######################################################################
+#<
+#
+# Function: p6df::modules::emacs::deps()
+#
+#>
+######################################################################
 p6df::modules::emacs::deps()    { 
 	ModuleDeps=(
 		p6m7g8/p6emacs
@@ -10,6 +24,13 @@ p6df::modules::emacs::deps()    {
 	) 
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::emacs::langs()
+#
+#>
+######################################################################
 p6df::modules::emacs::langs() {
   ## .emacs.d
   
@@ -22,6 +43,13 @@ p6df::modules::emacs::langs() {
   goenv rehash
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::emacs::external::brew()
+#
+#>
+######################################################################
 p6df::modules::emacs::external::brew() {
 
   brew tap daviderestivo/emacs-head
@@ -32,11 +60,28 @@ p6df::modules::emacs::external::brew() {
   brew install w3m
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::emacs::home::symlink()
+#
+#>
+######################################################################
 p6df::modules::emacs::home::symlink() {
 
   p6df::modules::emacs::home::choose "mine"
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::emacs::home::choose(config)
+#
+#  Args:
+#	config - 
+#
+#>
+######################################################################
 p6df::modules::emacs::home::choose() {
   local config="$1"
 
@@ -53,6 +98,13 @@ p6df::modules::emacs::home::choose() {
   ln -fs $src $HOME/.emacs.d
 }
     
+######################################################################
+#<
+#
+# Function: p6df::modules::emacs::init()
+#
+#>
+######################################################################
 p6df::modules::emacs::init() {
 
   alias ek="ps -efwww | awk '/[eE]macs/ { print \$2 }' | xargs kill -9"
