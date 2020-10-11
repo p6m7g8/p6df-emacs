@@ -15,6 +15,7 @@ p6df::modules::emacs::version() { echo "0.0.1" }
 ######################################################################
 p6df::modules::emacs::deps()    { 
 	ModuleDeps=(
+    p6m7g8/p6df-go
 		p6m7g8/p6emacs
 		magnars/.emacs.d
 		hlissner/doom-emacs
