@@ -5,5 +5,4 @@
 - p6df::modules::emacs::home::symlink()
 - p6df::modules::emacs::init()
 - p6df::modules::emacs::langs()
-- p6df::modules::emacs::version()
 
