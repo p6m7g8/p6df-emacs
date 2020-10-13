@@ -12,7 +12,6 @@ p6df::modules::emacs::deps()    {
 		magnars/.emacs.d
 		hlissner/doom-emacs
 		rmm5t/dotfiles
-		ananthakumaran/dotfiles
 		NicolasPetton/emacs.d
 	) 
 }
