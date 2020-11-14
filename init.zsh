@@ -70,7 +70,7 @@ p6df::modules::emacs::home::symlink() {
 # Function: p6df::modules::emacs::home::choose(config)
 #
 #  Args:
-#	config - 
+#	config -
 #
 #>
 ######################################################################
