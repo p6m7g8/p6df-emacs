@@ -45,7 +45,7 @@ p6df::modules::emacs::langs() {
 p6df::modules::emacs::external::brew() {
 
   brew tap daviderestivo/emacs-head
-  brew install emacs-head --with-cocoa --with-imagemagick --with-multicolor-fonts --with-mailutils --with-dbus
+  brew install emacs-head --with-cocoa --with-imagemagick --with-mailutils --with-dbus
 
   brew install mu
   brew install offlineimap
