@@ -38,9 +38,11 @@
 
 - [Change Log](CHANGELOG.md)
 
-### Usage
+## Usage
 
-#### init.zsh:
+### p6df-emacs:
+
+#### p6df-emacs/init.zsh:
 
 - p6df::modules::emacs::deps()
 - p6df::modules::emacs::external::brew()
