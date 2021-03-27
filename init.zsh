@@ -61,7 +61,8 @@ p6df::modules::emacs::external::brew() {
 ######################################################################
 p6df::modules::emacs::home::symlink() {
 
-  p6df::modules::emacs::home::choose "mine"
+  echo p6df::modules::emacs::home::choose "mine"
+# p6df::modules::emacs::home::choose "mine"
 }
 
 ######################################################################
