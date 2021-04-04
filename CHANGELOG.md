@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/p6m7g8/p6df-emacs/compare/v2.1.0...v2.1.1) (2021-04-04)
+
+
+* **link:** remove rendundant symlinks; echo for now ([#15](https://github.com/p6m7g8/p6df-emacs/issues/15)) ([14febff](https://github.com/p6m7g8/p6df-emacs/commit/14febff23fedc301ab8c9ea2407839c592d4d5f6))
+* **README:** updates generator ([#14](https://github.com/p6m7g8/p6df-emacs/issues/14)) ([c38ad16](https://github.com/p6m7g8/p6df-emacs/commit/c38ad169c97605889a638e83e5725ebf1793b17c))
+* Coc -> .github ([8a2a558](https://github.com/p6m7g8/p6df-emacs/commit/8a2a558322db572e105e4f3b017d0477e2542999))
+
 ## [2.1.0](https://github.com/p6m7g8/p6df-emacs/compare/v2.0.0...v2.1.0) (2020-12-06)
 
 
